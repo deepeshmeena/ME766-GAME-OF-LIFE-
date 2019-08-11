@@ -1,0 +1,34 @@
+
+
+- There are two kinds of code folders
+
+Both set of code are similar but only diiference is one set of code can take input file . since for large  grid size , making input file will not be possible to test performance hence another set of code is there in which initial state is defined locally by rand function. This  set is used to test performance for differenct values of parameters.
+ 
+
+ 1. Code_for_manual_input: In this code take input file . In input file , first line contains the size of square grid and then followed  by square grid of 0 and 1 where 0 denotes cell is dead and 1 denotes cell is alive .
+      Command for this folder:
+
+      for parallel version: g++ -fopenmp gol_parallel_input.cpp -o parallel
+      					    ./parallel <input_file> <iterations> 
+                     for ex: g++ -fopenmp gol_parallel_input.cpp -o parallel
+                             ./parallel  input.txt 5
+
+       for serial version :g++  gol_serial_input.cpp -o serial
+                           ./serial   <input_file> <iterations>
+
+                           for ex: g++  gol_serial_input.cpp -o serial
+                                  ./serial   input.txt 5
+
+ 2. Code_for_graphs : this set of codes is used to generate graph as we can not making large input file will be very tiresome process so in this we  randomly assign the cell 0 or 1 by using rand function.
+ 
+    In this set of codes we define the size of grid and no. of iterations locally 
+
+
+
+    Command:     
+
+          for parallel version: g++ -fopenmp gol_parallel.cpp -o parallel
+      					        ./parallel  
+
+      		 for serial version :g++  gol_serial.cpp -o serial
+                           ./serial   		                             
